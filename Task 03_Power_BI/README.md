@@ -6,95 +6,93 @@
 
 ## 📖 Project Overview
 
-This project is a comprehensive end-to-end BI solution designed to analyze the sales performance of a fashion retail business. Leveraging **SQL** for data processing and **Power BI** for visualization, the dashboard provides deep insights into profitability, product trends, and customer behavior, enabling stakeholders to make data-driven decisions.
+This project is a comprehensive end-to-end Business Intelligence solution designed to analyze the sales performance of a fashion retail business. Leveraging **SQL** for robust data processing and **Power BI** for advanced visualization, the solution provides deep insights into profitability, product trends, and customer behavior. 
+
+The objective is to move beyond static reporting to a dynamic, interactive experience that answers critical business questions regarding sales performance, profit margins, and customer segmentation.
 
 ---
 
-## 🔢 Key Performance Indicators (Snapshot)
+## 🚀 Key Performance Indicators (Headline Metrics)
 
-The analysis covers a substantial dataset with the following headline metrics:
+The analysis is built upon a high-volume transactional dataset, summarizing the following financial and operational metrics:
 
-| Metric | Value |
-| :--- | :--- |
-| **💰 Total Sales** | **$123M** |
-| **💵 Total Revenue** | **$117M** |
-| **📈 Total Profit** | **$54M** |
-| **📉 COGS** | **$69M** |
-| **📊 Profit Margin** | **43.81%** |
-| **📦 Total Orders** | **120K** |
-| **🛒 Avg Order Value** | **$1.03K** |
-| **👥 Total Customers** | **33K** |
+| Metric Category | KPI Name | Value |
+| :--- | :--- | :--- |
+| **Financials** | 💰 Total Sales | **$123M** |
+| | 💵 Total Revenue | **$117M** |
+| | 📈 Total Profit | **$54M** |
+| | 📉 COGS | **$69M** |
+| | 📊 Profit Margin | **43.81%** |
+| **Operations** | 📦 Total Orders | **120K** |
+| | 🛒 Avg Order Value | **$1.03K** |
+| **Customer Base** | 👥 Total Customers | **33K** |
 
 ---
 
 ## 🛠️ Tools & Technologies
 
-* **SQL (Data Processing):** Used for cleaning transactional data, handling missing values, and aggregating key metrics (Revenue, COGS, Profit) before loading into BI.
-* **Power BI (Visualization):** Dashboard development with interactive navigation.
-* **DAX (Analysis):** Created advanced measures for YoY growth, time-intelligence, and Pareto analysis.
-* **Data Modeling:** Implemented a Star Schema optimized for performance.
+* **SQL (Data Transformation):** Used for cleaning raw transactional data, handling inconsistent values/nulls, and aggregating metrics (Revenue, Profit, Orders) to create analysis-ready views.
+* **Power BI (Visualization):** Developed a multi-page interactive dashboard with dynamic navigation.
+* **DAX (Data Modeling):** Implemented complex measures for Time-Intelligence (YoY, MoM), Pareto Analysis, and Moving Averages.
+* **Data Modeling:** Designed a Star Schema optimized for high-performance querying.
 
 ---
 
-## 🗄️ Data Preparation & SQL Workflow
+## 🔄 Data Architecture & SQL Workflow
 
-Before visualization, the data underwent a rigorous preparation phase using SQL:
-1.  **Data Cleaning:** Validated inconsistent values and handled nulls.
-2.  **Aggregation:** calculated core business metrics at the transaction level.
-3.  **View Creation:** Developed SQL views for:
-    * Yearly/Quarterly/Monthly trends.
-    * Product Category & Subcategory performance.
-    * Customer-level segmentation.
+The project follows a structured ETL (Extract, Transform, Load) process:
+
+1.  **Data Cleaning:** Validation of transactional records and handling missing values.
+2.  **Aggregation:** Calculation of core business metrics at the grain level.
+3.  **View Generation:** SQL views were created to feed the BI tool:
+    * `vw_Sales_Trends`: Yearly, Quarterly, and Monthly aggregates.
+    * `vw_Product_Performance`: Category and Subcategory breakdowns.
+    * `vw_Customer_Metrics`: Customer lifetime value and segmentation.
+    * `vw_Geo_Analysis`: Country-level sales performance.
 
 ---
 
-## 📊 Dashboard Structure & Insights
+## 📊 Dashboard Analysis Modules
 
-The Power BI report is structured into **6 focused pages** for granular analysis:
+The solution is divided into **6 analytical modules**, each focusing on a specific business dimension:
 
 ### 1. 🔹 Snapshot Overview
-* **High-level KPIs:** Executive summary of financial health.
-* **Order Distribution:** Statistical analysis (Min, Max, Median, Mode) of order values.
-* **Forecasting:** Time-series trends with predictive insights.
+* **Executive Summary:** High-level cards for quick health checks.
+* **Statistical Distribution:** Analysis of order values (Min, Max, Median, Mode).
+* **Forecasting:** Predictive time-series modeling for future sales.
 
-### 2. 🔹 Sales Analysis
-* **Temporal Trends:** Sales performance by Year, Quarter, and Month.
-* **Growth Metrics:** Year-over-Year (YoY) and Month-over-Month (MoM) calculations.
-* **Channel Comparison:** Online vs. In-store sales breakdown.
+### 2. 🔹 Sales Performance
+* **Temporal Analysis:** Drill-down capabilities from Year → Quarter → Month.
+* **Growth Tracking:** Year-over-Year (YoY) and Month-over-Month (MoM) visualizations.
+* **Channel Split:** Comparative analysis of Online vs. In-store performance.
 
-### 3. 🔹 Profitability
-* **Margin Analysis:** Profit vs. COGS comparison across different dimensions.
-* **Customer Profitability:** Identifying which customers yield the highest margins.
+### 3. 🔹 Profitability & Margins
+* **Cost Analysis:** Revenue vs. COGS breakdown.
+* **Margin Trends:** Tracking profit margin fluctuations across different seasons.
+* **Customer Profitability:** Identifying high-value vs. low-margin customers.
 
-### 4. 🔹 Product Performance
-* **Category Drill-down:** Revenue and profit analysis by Product Category and Subcategory.
-* **Trend Analysis:** Tracking product performance changes over time.
+### 4. 🔹 Product Intelligence
+* **Category Performance:** Revenue and profit matrix by Category and Subcategory.
+* **Trend Analysis:** Identifying rising and declining product lines.
 
-### 5. 🔹 Customer Insights
-* **Demographics:** Sales breakdown by Gender and Country.
-* **Pareto Analysis:** Cumulative sales contribution to identify the top 20% of customers driving 80% of revenue.
+### 5. 🔹 Customer Segmentation
+* **Demographics:** Sales breakdown by Gender and Geography.
+* **Pareto Analysis (80/20 Rule):** Identifying the top 20% of customers contributing to 80% of revenue.
+* **Top Spenders:** Leaderboards for top-tier clients.
 
 ### 6. 🔹 Advanced Insights
-* **Geo-Spatial:** Country-level profit distribution maps.
-* **Seasonality:** Analysis of sales and orders by season.
+* **Geo-Spatial Analysis:** Heatmaps showing profit distribution by country.
+* **Seasonality:** Understanding the impact of seasons on order volume.
 
 ---
 
-## 📸 Dashboard Visuals
+## 🎛️ Interactive Capabilities
 
-> *Please insert screenshots of your dashboard pages here to showcase the UI/UX.*
-
-| Sales Overview | Product Analysis |
-| :---: | :---: |
-| ![Sales Screenshot](Link_to_image_1) | ![Product Screenshot](Link_to_image_2) |
-
----
-
-## 🎛️ Interactive Features
-
-* **Dynamic Filtering:** Filter data by Year, Category, Subcategory, and Country.
-* **Drill-Down:** Deep dive from annual views down to daily transaction levels.
-* **Cross-Filtering:** Selecting a data point in one visual updates the entire page context.
+The report allows users to slice and dice data dynamically using:
+* **Time Filters:** Year, Quarter, Month.
+* **Categorical Filters:** Product Category, Subcategory.
+* **Geographic Filters:** Country, Region.
+* **Cross-Filtering:** Clicking on any metric updates the entire dashboard context.
 
 ---
 
@@ -102,7 +100,4 @@ The Power BI report is structured into **6 focused pages** for granular analysis
 
 **Ahmed Abdel Moneim**
 * *AI & Data Science Engineer*
-* [LinkedIn Profile](Your_LinkedIn_URL) | [GitHub Profile](Your_GitHub_URL)
-
----
-*Built with ❤️ using SQL & Power BI*
+* [LinkedIn Profile](Your_LinkedIn_URL) | [GitHub Profile](Your_
