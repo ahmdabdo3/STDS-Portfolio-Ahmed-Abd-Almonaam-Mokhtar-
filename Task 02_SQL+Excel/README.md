@@ -72,27 +72,30 @@ FROM pizza_sales
 GROUP BY pizza_category;
 (Note: Full SQL script is available in the repository file SQL + EXCEL.sql)
 
-📉 Visualizations
-[Insert Screenshot of your Excel Dashboard here]
+## 📉 Visualizations
 
-The Excel dashboard includes:
+> *[Insert Screenshot of your Excel Dashboard here]*
 
-KPI Cards: Highlighting the main financial metrics.
+The Excel dashboard serves as the central reporting tool, featuring:
+* **KPI Cards:** Highlighting the main financial metrics at a glance.
+* **Trend Charts:** Line charts visualizing daily and monthly order trends to identify peak times.
+* **Distribution Charts:** Pie charts showing sales percentage breakdown by pizza category and size.
+* **Ranking Charts:** Bar charts distinctively displaying the top 5 and bottom 5 selling pizzas.
 
-Trend Charts: Line charts for daily and monthly order trends.
+---
 
-Distribution Charts: Pie charts showing sales % by category and size.
+## 🚀 Business Recommendations
 
-Ranking Charts: Bar charts for top/bottom 5 selling pizzas.
+Based on the data-driven insights, the following strategies are proposed:
 
-🚀 Business Recommendations
-Promotional Offers: Launch special promotions for the Brie Carre Pizza to boost its sales or consider removing it from the menu if low performance persists.
+1.  **Promotional Offers:** Launch targeted promotions for the **Brie Carre Pizza** to boost its sales, or consider removing it from the menu if low performance persists.
+2.  **Inventory Management:** Optimize stock levels for **Classic** pizzas and **Large** size dough, ensuring sufficient supply specifically before **Fridays and Saturdays**.
+3.  **Seasonal Marketing:** Maximize marketing spend during **July and May** to capitalize on historically peak demand periods.
 
-Inventory Management: Stock up on ingredients for Classic pizzas and Large size dough, especially before Fridays and Saturdays.
+---
 
-Seasonal Marketing: Maximize marketing spend in July and May to capitalize on peak demand periods.
+## 👤 Author
 
-👤 Author
-Ahmed Abdel Moneim
-
-AI & Data Science Engineer
+**Ahmed Abdel Moneim**
+* *AI & Data Science Engineer*
+* [LinkedIn Profile](YOUR_LINKEDIN_URL_HERE) | [GitHub Profile](YOUR_GITHUB_URL_HERE)
