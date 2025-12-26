@@ -1,93 +1,98 @@
-🍕 Pizza Sales Analysis – SQL & Excel Dashboard
+# 🍕 Pizza Sales Analytics | SQL & Excel Project
 
-This project presents an end-to-end sales analysis workflow, starting from SQL-based data analysis and ending with a fully interactive Excel dashboard to visualize key business insights from pizza sales data.
+![SQL](https://img.shields.io/badge/SQL-Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-Data_Analysis-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-The goal is to demonstrate strong skills in data extraction, transformation, analysis using SQL, followed by data visualization and dashboarding in Excel.
+## 📖 Project Overview
 
-🗄️ Data Preparation & SQL Analysis
+This project involves a comprehensive analysis of a pizza store's sales data to uncover key business insights. By leveraging **SQL** for data extraction and querying, and **Excel** for visualization, the analysis identifies best-selling products, peak sales periods, and customer purchasing behaviors.
 
-Before building the Excel dashboard, the dataset was explored and analyzed using SQL to:
+The goal is to provide data-driven recommendations to optimize inventory, marketing strategies, and operational efficiency.
 
-Clean and validate raw sales data
+---
 
-Aggregate key metrics such as:
+## 🔢 Key Performance Indicators (KPIs)
 
-Total Revenue
+Based on the dataset analysis, the following core metrics were established to measure business performance:
 
-Total Orders
+| Metric | Value | Description |
+| :--- | :--- | :--- |
+| **💰 Total Revenue** | **$817,860** | The sum of the total price of all pizza orders. |
+| **📦 Total Orders** | **21,350** | The total number of orders placed. |
+| **🍕 Total Pizzas Sold** | **49,574** | The total quantity of pizzas sold. |
+| **🛒 Avg Order Value** | **$38.31** | The average amount spent per order. |
+| **🔢 Avg Pizzas/Order** | **2.32** | The average number of pizzas per single order. |
 
-Total Pizzas Sold
+---
 
-Average Order Value (AOV)
+## 🛠️ Tools & Technologies
 
-Analyze sales performance by:
+* **SQL (Data Querying):** Used to perform complex queries, aggregations (`SUM`, `COUNT`, `AVG`), and grouping to extract KPIs and trends from the raw database.
+* **Excel (Data Visualization):** Used to create Pivot Tables and Charts (Bar, Line, Pie) to visualize the SQL outputs.
+* **Data Cleaning:** Handled data types and formatted date/currency fields for accurate analysis.
 
-Date, day of week, and hour
+---
 
-Pizza category and size
+## 📊 Key Insights & Trends
 
-Individual pizza items
+### 1. 📅 Daily & Monthly Trends
+* **Busiest Days:** **Friday** and **Saturday** see the highest volume of orders, indicating a strong weekend demand.
+* **Peak Months:** **July** and **May** recorded the highest order activity, while consumption dips slightly towards the end of the year.
 
-Identify:
+### 2. 🥧 Sales by Category & Size
+* **Top Category:** The **Classic** category contributes the most to both total orders and total revenue.
+* **Preferred Size:** **Large (L)** pizzas are the most popular choice among customers, accounting for the highest percentage of sales, followed by Medium (M).
 
-Peak ordering times
+### 3. 🏆 Best & Worst Sellers
+Analysis of top 5 and bottom 5 pizzas based on Revenue, Quantity, and Total Orders:
 
-Best and worst selling pizzas
+* **👑 Best Seller:** The **Thai Chicken Pizza** generates the highest revenue. The **Classic Deluxe Pizza** is the most ordered by quantity.
+* **📉 Worst Seller:** The **Brie Carre Pizza** consistently ranks lowest in revenue, total quantity, and total orders.
 
-Category and size contribution to total sales
+---
 
-The SQL queries were used to create structured, analysis-ready datasets, which were then exported and connected to Excel for dashboard creation.
+## 💻 SQL Methodology
 
-📊 Key Metrics (KPIs)
+The project utilized advanced SQL queries to derive insights. Below is a conceptual overview of the queries used:
 
-Total Revenue: $817,860
+```sql
+-- Example: Calculating Total Revenue
+SELECT SUM(total_price) AS Total_Revenue FROM pizza_sales;
 
-Average Order Value: $38.31
+-- Example: Daily Trend for Total Orders
+SELECT DATENAME(DW, order_date) AS order_day, COUNT(DISTINCT order_id) AS total_orders 
+FROM pizza_sales
+GROUP BY DATENAME(DW, order_date);
 
-Total Pizzas Sold: 49,574
+-- Example: % of Sales by Pizza Category
+SELECT pizza_category, CAST(SUM(total_price) AS DECIMAL(10,2)) as total_revenue,
+CAST(SUM(total_price) * 100 / (SELECT SUM(total_price) from pizza_sales) AS DECIMAL(10,2)) AS PCT
+FROM pizza_sales
+GROUP BY pizza_category;
+(Note: Full SQL script is available in the repository file SQL + EXCEL.sql)
 
-Total Orders: 21,350
+📉 Visualizations
+[Insert Screenshot of your Excel Dashboard here]
 
-Average Pizzas per Order: 2.32
+The Excel dashboard includes:
 
-⏰ Time-Based Insights
+KPI Cards: Highlighting the main financial metrics.
 
-Orders peak on weekends (Friday & Saturday evenings)
+Trend Charts: Line charts for daily and monthly order trends.
 
-Highest order volume occurs between 12:00 PM – 8:00 PM
+Distribution Charts: Pie charts showing sales % by category and size.
 
-Daily and hourly sales trends are clearly visualized
+Ranking Charts: Bar charts for top/bottom 5 selling pizzas.
 
-🍕 Product & Sales Analysis
+🚀 Business Recommendations
+Promotional Offers: Launch special promotions for the Brie Carre Pizza to boost its sales or consider removing it from the menu if low performance persists.
 
-Sales distribution by pizza category and size
+Inventory Management: Stock up on ingredients for Classic pizzas and Large size dough, especially before Fridays and Saturdays.
 
-Top 5 best-selling and bottom 5 worst-selling pizzas
+Seasonal Marketing: Maximize marketing spend in July and May to capitalize on peak demand periods.
 
-Ranking of pizza categories by quantity sold
+👤 Author
+Ahmed Abdel Moneim
 
-🎛 Interactive Dashboard Features
-
-Dynamic date filtering using slicers and timelines
-
-Interactive charts for time, product, and category analysis
-
-Clean, business-oriented dashboard design
-
-🛠 Tools & Technologies Used
-
-SQL (Data cleaning, aggregation, and analysis)
-
-Microsoft Excel
-
-Pivot Tables & Pivot Charts
-
-Slicers & Timelines
-
-Advanced formulas
-
-Data visualization & dashboard design best practices
-
-🎯 Project Objective
-
-This project showcases a real-world data analytics pipeline, combining SQL for data analysis and Excel for visualization, making it a strong portfolio project for roles such as Data Analyst or Business Analyst.
+AI & Data Science Engineer
