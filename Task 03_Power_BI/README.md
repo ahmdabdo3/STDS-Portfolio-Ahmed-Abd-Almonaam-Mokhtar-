@@ -1,142 +1,108 @@
-👗 Fashion Retail Analysis – SQL & Power BI Dashboard
+# 👗 Fashion Retail Analytics | SQL & Power BI Solution
 
-This project is a comprehensive fashion retail analytics solution Power BI for interactive dashboarding and visualization.
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=Power%20Bi&logoColor=black)
+![SQL](https://img.shields.io/badge/SQL-Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
+![Data Engineering](https://img.shields.io/badge/Data_Engineering-ETL-blue?style=for-the-badge)
 
-The dashboard provides deep insights into sales performance, profitability, product behavior, customer segments, and time-based trends, enabling stakeholders to make data-driven business decisions.
+## 📖 Project Overview
 
-🗄️ Data Preparation & SQL Analysis
+This project is a comprehensive end-to-end BI solution designed to analyze the sales performance of a fashion retail business. Leveraging **SQL** for data processing and **Power BI** for visualization, the dashboard provides deep insights into profitability, product trends, and customer behavior, enabling stakeholders to make data-driven decisions.
 
-Clean and validate transactional data
+---
 
-Handle missing and inconsistent values
+## 🔢 Key Performance Indicators (Snapshot)
 
-Aggregate key business metrics:
+The analysis covers a substantial dataset with the following headline metrics:
 
-Total Sales
+| Metric | Value |
+| :--- | :--- |
+| **💰 Total Sales** | **$123M** |
+| **💵 Total Revenue** | **$117M** |
+| **📈 Total Profit** | **$54M** |
+| **📉 COGS** | **$69M** |
+| **📊 Profit Margin** | **43.81%** |
+| **📦 Total Orders** | **120K** |
+| **🛒 Avg Order Value** | **$1.03K** |
+| **👥 Total Customers** | **33K** |
 
-Revenue
+---
 
-Profit
+## 🛠️ Tools & Technologies
 
-COGS
+* **SQL (Data Processing):** Used for cleaning transactional data, handling missing values, and aggregating key metrics (Revenue, COGS, Profit) before loading into BI.
+* **Power BI (Visualization):** Dashboard development with interactive navigation.
+* **DAX (Analysis):** Created advanced measures for YoY growth, time-intelligence, and Pareto analysis.
+* **Data Modeling:** Implemented a Star Schema optimized for performance.
 
-Orders
+---
 
-Average Order Value
+## 🗄️ Data Preparation & SQL Workflow
 
-Create analytical views for:
+Before visualization, the data underwent a rigorous preparation phase using SQL:
+1.  **Data Cleaning:** Validated inconsistent values and handled nulls.
+2.  **Aggregation:** calculated core business metrics at the transaction level.
+3.  **View Creation:** Developed SQL views for:
+    * Yearly/Quarterly/Monthly trends.
+    * Product Category & Subcategory performance.
+    * Customer-level segmentation.
 
-Yearly, quarterly, and monthly trends
+---
 
-Product category and subcategory performance
+## 📊 Dashboard Structure & Insights
 
-Country-level analysis
+The Power BI report is structured into **6 focused pages** for granular analysis:
 
-Customer-level metrics
+### 1. 🔹 Snapshot Overview
+* **High-level KPIs:** Executive summary of financial health.
+* **Order Distribution:** Statistical analysis (Min, Max, Median, Mode) of order values.
+* **Forecasting:** Time-series trends with predictive insights.
 
-Prepare optimized, analysis-ready tables used directly in Power BI
+### 2. 🔹 Sales Analysis
+* **Temporal Trends:** Sales performance by Year, Quarter, and Month.
+* **Growth Metrics:** Year-over-Year (YoY) and Month-over-Month (MoM) calculations.
+* **Channel Comparison:** Online vs. In-store sales breakdown.
 
-📊 Key Business KPIs
+### 3. 🔹 Profitability
+* **Margin Analysis:** Profit vs. COGS comparison across different dimensions.
+* **Customer Profitability:** Identifying which customers yield the highest margins.
 
-Total Sales: $123M
+### 4. 🔹 Product Performance
+* **Category Drill-down:** Revenue and profit analysis by Product Category and Subcategory.
+* **Trend Analysis:** Tracking product performance changes over time.
 
-Total Revenue: $117M
+### 5. 🔹 Customer Insights
+* **Demographics:** Sales breakdown by Gender and Country.
+* **Pareto Analysis:** Cumulative sales contribution to identify the top 20% of customers driving 80% of revenue.
 
-Total Profit: $54M
+### 6. 🔹 Advanced Insights
+* **Geo-Spatial:** Country-level profit distribution maps.
+* **Seasonality:** Analysis of sales and orders by season.
 
-COGS: $69M
+---
 
-Profit Margin: 43.81%
+## 📸 Dashboard Visuals
 
-Total Orders: 120K
+> *Please insert screenshots of your dashboard pages here to showcase the UI/UX.*
 
-Average Order Value: 1.03K
+| Sales Overview | Product Analysis |
+| :---: | :---: |
+| ![Sales Screenshot](Link_to_image_1) | ![Product Screenshot](Link_to_image_2) |
 
-Total Customers: 33K
+---
 
-📈 Dashboard Structure & Insights
-🔹 Snapshot Overview
+## 🎛️ Interactive Features
 
-High-level KPIs
+* **Dynamic Filtering:** Filter data by Year, Category, Subcategory, and Country.
+* **Drill-Down:** Deep dive from annual views down to daily transaction levels.
+* **Cross-Filtering:** Selecting a data point in one visual updates the entire page context.
 
-Order value distribution (min, max, median, mode, quartiles)
+---
 
-Sales breakdown by country, category, and subcategory
+## 👤 Author
 
-Time-series sales trend with forecasting
+**Ahmed Abdel Moneim**
+* *AI & Data Science Engineer*
+* [LinkedIn Profile](Your_LinkedIn_URL) | [GitHub Profile](Your_GitHub_URL)
 
-🔹 Sales Analysis
-
-Sales by year, quarter, month
-
-Revenue YoY and MoM growth analysis
-
-Online vs In-store sales comparison
-
-Seasonal sales patterns
-
-🔹 Profitability
-
-Profit and profit margin analysis
-
-COGS vs Revenue comparison
-
-Profit by product category and month
-
-Profit by customer
-
-🔹 Product Performance
-
-Revenue and profit by product category
-
-Subcategory contribution analysis
-
-Product performance trends over time
-
-🔹 Customer Insights
-
-Sales by customer gender
-
-Total customers by country
-
-Top customers by sales
-
-Cumulative sales contribution (Pareto analysis)
-
-🔹 Advanced Insights
-
-Country-level profit distribution
-
-Sales and orders by season
-
-Product category growth trends
-
-🎛 Interactive Features
-
-Dynamic filters for:
-
-Year
-
-Product Category
-
-Subcategory
-
-Country
-
-Drill-down and cross-filtering across all visuals
-
-Multi-page navigation for focused analysis
-
-🛠 Tools & Technologies Used
-
-Power BI – Dashboard development & visualization
-
-DAX – Measures, KPIs, and advanced calculations
-
-Data modeling & star schema design
-
-Business intelligence best practices
-
-🎯 Project Objective
-
-The objective of this project is to showcase an end-to-end BI workflow, interactive Power BI dashboards that provide actionable insights for retail business performance.
+---
+*Built with ❤️ using SQL & Power BI*
