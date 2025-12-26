@@ -98,6 +98,6 @@ The report allows users to slice and dice data dynamically using:
 
 ## 👤 Author
 
-**Ahmed Abdel Moneim**
+**Ahmed Abd Almenam Mokhtar**
 * *AI & Data Science Engineer*
-* [LinkedIn Profile](Your_LinkedIn_URL) | [GitHub Profile](Your_
+
