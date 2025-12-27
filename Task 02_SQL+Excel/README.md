@@ -74,7 +74,6 @@ GROUP BY pizza_category;
 ```
 ## 📉 Visualizations
 
-> *[Insert Screenshot of your Excel Dashboard here]*
 
 The Excel dashboard serves as the central reporting tool, featuring:
 * **KPI Cards:** Highlighting the main financial metrics at a glance.
